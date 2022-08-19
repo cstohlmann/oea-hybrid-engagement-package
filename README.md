@@ -1,5 +1,16 @@
 # Hybrid Student Engagement Package
 
+The OEA Hybrid Student Engagement Package provides a set of assets which support an education system in developing their own holistic model to address and gauge hybrid student engagement. There are two main components of this package: 
+
+1. <ins>Guidance and documentation:</ins> The [OEA Hybrid Student Engagement Package - Use Case Documentation]() provides guidance on the end-to-end process of developing a successful Hybrid Student Engagement use case project, including how to engage stakeholders in the project, prior research on the use case problem domain and theory, how to map data sources to the theory of the problem, and how to implement Microsoft’s Principles of Responsible Data and AI. <em> It is highly recommended this document be reviewed by any education system considering using this package, and that the documentation be revised to the specific data and decisions for that system’s context.  </em>
+2. <ins>Technical assets:</ins> Various assets are freely available in this package to help accelerate implementation of Hybrid Student Engagement use cases. Assets include descriptions of data sources, notebooks for data processing, a pipeline for model building and deployment, and sample PowerBI dashboards. See descriptions of technical assets below.
+
+<ins> Important Note:</ins> It is strongly recommended to education systems or institutions planning to use this package establish that they establish a process for obtaining student, family, guardian, teacher, faculty, and staff **consent for using this type of student engagement data**. This consent should be part of the system or institution’s **broader data governance policy** that clearly specifies who can have access to what data, under what conditions, for what purposes, and for what length of time.
+
+This OEA Package was developed through a partnership between Microsoft Education, and [Kwantum Analytics](https://www.kwantumedu.com/).
+
+
+# WHAT IVY HAD ORIGINALLY
 Student engagement in learning is the starting point for teaching and learning outcomes. Without engagement, learning is blocked. 
 
 As teaching and learning increasingly use digital platforms and tools, and learning takes place outside of schools in digital learning environments, traditional attendance measures are not as representative of students’ actual engagement. Student attendance data is an important metric that schools track and derive insights from. Schools also need a way to measure students' digital activity across the different apps used for learning. With many schools’ transition to hybrid learning, having a way to combine students' in-person attendance in schools and their digital activity will be valuable for school systems. This combination provides a more comprehensive view of student engagement in learning than attendance data alone.
