@@ -28,7 +28,7 @@ See below for examples of developed PowerBI dashboards (see also [Power BI]()).
 <strong><em>[NEEDS TO BE UPDATED]</strong></em>
 Equity of Digital Access  | Quality of Digital Access
 :-------------------------:|:-------------------------:
-![](https://github.com/cviddenKwantum/oea-digital-learning-insights/blob/main/Digital_Equity_of_Access/docs/images/pbi1nosignal.png) |  ![](https://github.com/cviddenKwantum/oea-digital-learning-insights/blob/main/Digital_Equity_of_Access/docs/images/pbi2landscape.png)
+![](https://github.com/cviddenKwantum/OpenEduAnalytics/blob/3feaac196010f11d3cc925eb773b731cd3c37dea/packages/ContosoISD_hybrid_engagement/docs/images/PowerBI1.png) |  ![](https://github.com/cviddenKwantum/oea-digital-learning-insights/blob/main/Digital_Equity_of_Access/docs/images/pbi2landscape.png)
 
 ## Data Sources
 
@@ -62,11 +62,11 @@ This Digital Equity of Access package was developed by [Kwantum Analytics](https
 
 Assets in the Digital Equity of Access package include:
 
-1. [Data](https://github.com/cviddenKwantum/oea-digital-learning-insights/tree/main/Digital_Equity_of_Access/data): For understanding the data relationships and standardized schema mappings used for certain groups of data.
-2. [Documentation](https://github.com/cviddenKwantum/oea-digital-learning-insights/tree/main/Digital_Equity_of_Access/docs): [OEA Equity of Digital Access Package - Use Case Documentation](https://github.com/cviddenKwantum/oea-digital-learning-insights/blob/69dc247874cdec4aeac389a54d38d99d112e9a92/Digital_Equity_of_Access/docs/OEA%20Digital%20Learning%20Package%20-%20Access%20Use%20Case.pdf). 
-3. [Notebooks](https://github.com/cviddenKwantum/oea-digital-learning-insights/tree/main/Digital_Equity_of_Access/notebooks): For cleaning, processing, and curating data within the data lake.
-4. [Pipelines](https://github.com/cviddenKwantum/oea-digital-learning-insights/tree/main/Digital_Equity_of_Access/pipelines): For the overarching data processing (i.e., aggregation, subsetting, schema transformation, etc.), and support for PowerBI dashboards.
-5. [PowerBI](https://github.com/cviddenKwantum/oea-digital-learning-insights/tree/main/Digital_Equity_of_Access/powerbi): For exploring, visualizing, and deriving insights from the data.
+1. [Data](https://github.com/cstohlmann/oea-hybrid-engagement-package/tree/main/data): For understanding the data relationships and standardized schema mappings used for certain groups of data.
+2. [Documentation](https://github.com/cstohlmann/oea-hybrid-engagement-package/tree/main/docs): [OEA Hybrid Student Engagement Package - Use Case Documentation](). 
+3. [Notebooks](https://github.com/cstohlmann/oea-hybrid-engagement-package/tree/main/notebook): For cleaning, processing, and curating data within the data lake.
+4. [Pipelines](https://github.com/cstohlmann/oea-hybrid-engagement-package/tree/main/pipeline): For the overarching data processing (i.e., aggregation, subsetting, schema transformation, etc.), and support for PowerBI dashboards.
+5. [PowerBI](https://github.com/cstohlmann/oea-hybrid-engagement-package/tree/main/powerbi): For exploring, visualizing, and deriving insights from the data.
 
 # Legal Notices
 Microsoft and any contributors grant you a license to the Microsoft documentation and other content in this repository under the [Creative Commons Attribution 4.0 International Public License](https://creativecommons.org/licenses/by/4.0/legalcode), see the [LICENSE](https://github.com/microsoft/OpenEduAnalytics/blob/main/LICENSE) file, and grant you a license to any code in the repository under the [MIT License](https://opensource.org/licenses/MIT), see the [LICENSE-CODE](https://github.com/microsoft/OpenEduAnalytics/blob/main/LICENSE-CODE) file.
@@ -76,49 +76,3 @@ Microsoft, Windows, Microsoft Azure and/or other Microsoft products and services
 Privacy information can be found at https://privacy.microsoft.com/en-us/
 
 Microsoft and any contributors reserve all other rights, whether under their respective copyrights, patents, or trademarks, whether by implication, estoppel or otherwise.
-
-# WHAT IVY HAD ORIGINALLY
-Student engagement in learning is the starting point for teaching and learning outcomes. Without engagement, learning is blocked. 
-
-As teaching and learning increasingly use digital platforms and tools, and learning takes place outside of schools in digital learning environments, traditional attendance measures are not as representative of students’ actual engagement. Student attendance data is an important metric that schools track and derive insights from. Schools also need a way to measure students' digital activity across the different apps used for learning. With many schools’ transition to hybrid learning, having a way to combine students' in-person attendance in schools and their digital activity will be valuable for school systems. This combination provides a more comprehensive view of student engagement in learning than attendance data alone.
-
-The Hybrid Engagement Package from OEA includes a set of assets for combining in-person attendance and digital activity, providing a more holistic representation of student engagement. This can be used by system and school leaders, and by teachers to identify:
- - Which schools and classes have higher and lower levels of hybrid engagement in learning, and whether expected patterns of engagement are continuing over time. 
- - Which schools and classes have higher and lower levels of in-person attendance or digital activities. This can be used to plan more precisely targeted programs or interventions to increase either attendance or use of digital learning tools, or both. 
-
-The assets in this package can be combined with course completion, academic assessments, competency measures, mastery data, graduation rates, or other outcome data to identify how patterns of engagement relate to learning outcomes. With such combined data, schools and teachers can start to analyze whether new programs or interventions help to improve learning outcomes.  
-
-![image](https://github.com/cviddenKwantum/OpenEduAnalytics/blob/3feaac196010f11d3cc925eb773b731cd3c37dea/packages/ContosoISD_hybrid_engagement/docs/images/PowerBI1.png)
-
-This package was developed by Microsoft Education in partnership with Fresno Unified School District in California. The architecture and reference implementation for all assets is built on [Azure Synapse Analytics](https://azure.microsoft.com/en-us/services/synapse-analytics/) - with [Azure Data Lake Storage](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction) as the storage backbone,  and [Azure Active Directory](https://azure.microsoft.com/en-us/services/active-directory/) providing the role-based access control.
-
-The assets currently represents data from Microsoft Teams for Digital Activities, but that source of data can be replaced with other types of digital activity data or combined with other sources of digital activity data if the school or system has access to those data. 
-
-Assets in the hybrid student engagement package include: 
-
-1. Documentation for ingesting data from multiple sources into the data lake.
-2. Notebooks for cleaning, transforming, anonymizing and enriching data into the data warehouse.
-3. PowerBI templates for exploring, visualizing and deriving insights from the data.
-
-This package relies on 2 existing OEA modules:
-1. [Contoso_SIS module](https://github.com/cviddenKwantum/OpenEduAnalytics/tree/main/modules/Contoso_SIS)
-2. [M365 module](https://github.com/cviddenKwantum/OpenEduAnalytics/tree/main/modules/M365)
-
-The hybrid student engagement package and its modules [welcome contributions.](https://github.com/microsoft/OpenEduAnalytics/blob/main/CONTRIBUTING.md) 
-
-# Legal Notices
-
-Microsoft and any contributors grant you a license to the Microsoft documentation and other content
-in this repository under the [Creative Commons Attribution 4.0 International Public License](https://creativecommons.org/licenses/by/4.0/legalcode),
-see the [LICENSE](LICENSE) file, and grant you a license to any code in the repository under the [MIT License](https://opensource.org/licenses/MIT), see the
-[LICENSE-CODE](LICENSE-CODE) file.
-
-Microsoft, Windows, Microsoft Azure and/or other Microsoft products and services referenced in the documentation
-may be either trademarks or registered trademarks of Microsoft in the United States and/or other countries.
-The licenses for this project do not grant you rights to use any Microsoft names, logos, or trademarks.
-Microsoft's general trademark guidelines can be found at http://go.microsoft.com/fwlink/?LinkID=254653.
-
-Privacy information can be found at https://privacy.microsoft.com/en-us/
-
-Microsoft and any contributors reserve all other rights, whether under their respective copyrights, patents,
-or trademarks, whether by implication, estoppel or otherwise.
