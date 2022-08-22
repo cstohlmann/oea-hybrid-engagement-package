@@ -37,7 +37,7 @@ This package combines multiple data sources which were identified through evalua
 * <strong>Access/Connectivity data</strong>: Upload and download speed, latency, request processing time, internet provided
 * <strong>Device Assignment data</strong>: Device information, student assignment
 
-This package can use several [OEA Modules](https://github.com/microsoft/OpenEduAnalytics/tree/main/modules) to help ingest data sources that are typically used to understand patterns of digital inequity (see below for list of relevant OEA modules).  
+This package can use several [OEA Modules](https://github.com/microsoft/OpenEduAnalytics/tree/main/modules) to help ingest data sources that are typically used to understand patterns seen in hybrid student engagement (see below for list of relevant OEA modules). 
 
 | OEA Module | Description |
 | --- | --- |
@@ -46,6 +46,15 @@ This package can use several [OEA Modules](https://github.com/microsoft/OpenEduA
 | [Microsoft Graph](https://github.com/microsoft/OpenEduAnalytics/tree/main/modules/Microsoft_Data/Microsoft_Graph) | For other forms of Microsoft engagement/activity data. |
 | [Clever](https://github.com/microsoft/OpenEduAnalytics/tree/main/modules/Digital_Learning_Apps_and_Platforms/Clever) | For engagement/activity data pertaining to student use of digital learning applications, used and managed by an education system. |
 | [i-Ready](https://github.com/microsoft/OpenEduAnalytics/tree/main/modules/Digital_Learning_Apps_and_Platforms/iReady) | For engagement/activity data pertaining to student lesson completion, and learning outcomes data in the context of student diagnostic assessment results. |
+
+These modules are then combined into single tables based on the types of data contained with them, using the [OEA schemas](https://github.com/microsoft/OpenEduAnalytics/tree/main/modules/_OEA_Schemas) to ingest and transform the module data so that only the relevant columns are extracted from the stage 2 data. Below is the list of relevant OEA schema definitions used in this package.
+
+| OEA Schema | Description |
+| --- | --- |
+| [Digital Engagement Schema](https://github.com/microsoft/OpenEduAnalytics/tree/main/modules/_OEA_Schemas/Digital_Engagement_Schema) | For extracting forms digital engagement into a standardized OEA schema. |
+| [Attendance Schema](https://github.com/microsoft/OpenEduAnalytics/tree/main/modules/_OEA_Schemas/Attendance_Schema) | For extracting forms of attendance into a standardized OEA schema. |
+| Learning Outcomes Schema | For extracting forms of learning outcomes (e.g. diagnostic assessment results, student grades) into a standardized OEA schema. |
+| SIS Schema | For extracting forms of SIS data into a standardized OEA schema. |
 
 
 ## Package Setup Instructions
