@@ -30,24 +30,39 @@ Equity of Digital Access  | Quality of Digital Access
 :-------------------------:|:-------------------------:
 ![](https://github.com/cviddenKwantum/OpenEduAnalytics/blob/3feaac196010f11d3cc925eb773b731cd3c37dea/packages/ContosoISD_hybrid_engagement/docs/images/PowerBI1.png) |  ![](https://github.com/cviddenKwantum/oea-digital-learning-insights/blob/main/Digital_Equity_of_Access/docs/images/pbi2landscape.png)
 
+
+## Package Setup Instructions
+
+To implement your own Hybrid Engagement Package, complete the following: 
+
+<ins><strong>Preparation:</ins></strong> Ensure you have proper [Azure subscription and credentials](https://github.com/microsoft/OpenEduAnalytics/tree/main/framework) and setup the [most recent version of OEA framework](https://github.com/microsoft/OpenEduAnalytics/tree/main/framework#setup-of-framework-assets). This will include the most recent version of the [OEA python class](https://github.com/microsoft/OpenEduAnalytics/blob/main/framework/synapse/notebook/OEA_py.ipynb).
+
+1. Examine available data sources from modules. See [below](https://github.com/microsoft/OpenEduAnalytics/tree/main/packages/package_catalog/Hybrid_Engagement#data-sources) for these related data sources. Choose which modules/data sources to implement.
+    * <em>Note:</em> This package was developed using the following modules: [Contoso SIS](https://github.com/microsoft/OpenEduAnalytics/tree/main/modules/module_catalog/Student_and_School_Data_Systems), [Microsoft Education Insights](https://github.com/microsoft/OpenEduAnalytics/tree/main/modules/module_catalog/Microsoft_Education_Insights), [Clever](https://github.com/microsoft/OpenEduAnalytics/tree/main/modules/module_catalog/Clever), and [i-Ready](https://github.com/microsoft/OpenEduAnalytics/tree/main/modules/module_catalog/iReady). 
+    * Run each of the module test data pipelines to ingest the test data into stage 2. 
+2. Use the [Digital Engagement Schema pipeline](https://github.com/microsoft/OpenEduAnalytics/tree/main/schemas/schema_catalog/Digital_Engagement_Schema/pipeline) and process the compatible modules you choose to ingest. This will combine all module-tables into a unified table, and creates a single database for the Power BI dashboard. Visit the [Data](https://github.com/microsoft/OpenEduAnalytics/tree/main/packages/package_catalog/Hybrid_Engagement/data) page for a detailed explanation of the  example Power BI star schema model. 
+3. Use the Power BI dashboard to explore Hybrid Engagement. Note that all pipelines create SQL views which can be accessed via your Synapse workspace serveless SQL endpoint. Example dashboard concepts are [provided in this package](https://github.com/microsoft/OpenEduAnalytics/tree/main/packages/package_catalog/Hybrid_Engagement/powerbi).
+
 ## Data Sources
 
-This package combines multiple data sources which were identified through evaluating the characteristics of digital equity: 
-* <strong>School Information System (SIS)</strong>: School, grade level, class roster, and demographics
-* <strong>Access/Connectivity data</strong>: Upload and download speed, latency, request processing time, internet provided
-* <strong>Device Assignment data</strong>: Device information, student assignment
+This package combines multiple data sources which were identified through evaluating the characteristics of hybrid engagement: 
+* <strong>School Information System (SIS)</strong>: School, grade level, class roster, and demographics.
+* <strong>Attendance data</strong>: Student in-person attendance data.
+* <strong>Digital Engagement data</strong>: Application use, type of engagement (log-ins, Teams meeting attendance duration, etc.), date of the activity, and user information of the activities.
+
 
 This package can use several [OEA Modules](https://github.com/microsoft/OpenEduAnalytics/tree/main/modules) to help ingest data sources that are typically used to understand patterns seen in hybrid student engagement (see below for list of relevant OEA modules). 
 
 | OEA Module | Description |
 | --- | --- |
 | [Ed-Fi Data Standards](https://github.com/microsoft/OpenEduAnalytics/tree/main/modules/Education_Data_Standards/Ed-Fi) | For typical Student Information System (SIS) data, including school rosters, grade level and demographic information. |
-| [Microsoft Education Insights](https://github.com/microsoft/OpenEduAnalytics/tree/main/modules/Microsoft_Data/Microsoft_Education_Insights) | For Microsoft engagement/activity data. |
-| [Microsoft Graph](https://github.com/microsoft/OpenEduAnalytics/tree/main/modules/Microsoft_Data/Microsoft_Graph) | For other forms of Microsoft engagement/activity data. |
-| [Clever](https://github.com/microsoft/OpenEduAnalytics/tree/main/modules/Digital_Learning_Apps_and_Platforms/Clever) | For engagement/activity data pertaining to student use of digital learning applications, used and managed by an education system. |
-| [i-Ready](https://github.com/microsoft/OpenEduAnalytics/tree/main/modules/Digital_Learning_Apps_and_Platforms/iReady) | For engagement/activity data pertaining to student lesson completion, and learning outcomes data in the context of student diagnostic assessment results. |
+| [Contoso SIS](https://github.com/microsoft/OpenEduAnalytics/tree/main/modules/module_catalog/Student_and_School_Data_Systems) | Fictitious student in-person attendance data. |
+| [Microsoft Education Insights](https://github.com/microsoft/OpenEduAnalytics/tree/main/modules/module_catalog/Microsoft_Education_Insights) | For Microsoft engagement/activity data, and can be used for SIS data. |
+| [Microsoft Graph](https://github.com/microsoft/OpenEduAnalytics/tree/main/modules/module_catalog/Microsoft_Graph) | For other forms of Microsoft engagement/activity data. |
+| [Clever](https://github.com/microsoft/OpenEduAnalytics/tree/main/modules/module_catalog/Clever) | For engagement/activity data pertaining to student use of digital learning applications, used and managed by an education system. |
+| [i-Ready](https://github.com/microsoft/OpenEduAnalytics/tree/main/modules/module_catalog/iReady) | For engagement/activity data pertaining to student lesson completion, and learning outcomes data in the context of student diagnostic assessment results. |
 
-These modules are then combined into single tables based on the types of data contained with them, using the [OEA schemas](https://github.com/microsoft/OpenEduAnalytics/tree/main/modules/_OEA_Schemas) to ingest and transform the module data so that only the relevant columns are extracted from the stage 2 data. Below is the list of relevant OEA schema definitions used in this package.
+These modules are then combined into single tables based on the types of data contained with them, using the [OEA schemas](https://github.com/microsoft/OpenEduAnalytics/tree/main/schemas) to ingest and transform the module data so that only the relevant columns are extracted from the stage 2 data. Below is the list of relevant OEA schema definitions used in this package.
 
 | OEA Schema | Description |
 | --- | --- |
@@ -56,23 +71,15 @@ These modules are then combined into single tables based on the types of data co
 | Learning Outcomes Schema | For extracting forms of learning outcomes (e.g. diagnostic assessment results, student grades) into a standardized OEA schema. |
 | SIS Schema | For extracting forms of SIS data into a standardized OEA schema. |
 
-
-## Package Setup Instructions
-
-To implement your own Digital Equity of Access Package, complete the following: 
-- Install the most recent version of the OEA reference achitecture via the [OEA setup instructions](https://github.com/microsoft/OpenEduAnalytics#setup).
-- Examine available data sources in Stage2p. See [above](https://github.com/microsoft/OpenEduAnalytics/tree/main/packages/Digital_Equity_of_Access#data-sources) for related data sources.
-- Use a pipeline such the example [Package Pipeline](https://github.com/microsoft/OpenEduAnalytics/tree/main/packages/Digital_Equity_of_Access/pipelines) to combined data sources into a Power BI star schema model like the example provided in the [Data](https://github.com/microsoft/OpenEduAnalytics/tree/main/packages/Digital_Equity_of_Access/data) page. 
-- Create a Power BI dashboard to explore Digital Equity of Access. Note the example [Package Pipeline](https://github.com/microsoft/OpenEduAnalytics/tree/main/packages/Digital_Equity_of_Access/pipelines) creates a SQL view which can be accessed via your Synapse workspace serveless SQL endpoint. Example dashboard concepts are [provided in this package](https://github.com/cviddenKwantum/OpenEduAnalytics/tree/main/packages/Digital_Equity_of_Access/powerbi).
-
 ## Package Components
 
-This Digital Equity of Access package was developed by [Kwantum Analytics](https://www.kwantumanalytics.com/) in partnership with [Fresno Unified School District](https://www.fresnounified.org/) in Fresno, California. The architecture and reference implementation for all modules is built on [Azure Synapse Analytics](https://azure.microsoft.com/en-us/services/synapse-analytics/) - with [Azure Data Lake Storage](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction) as the storage backbone, and [Azure Active Directory](https://azure.microsoft.com/en-us/services/active-directory/) providing the role-based access control.
+This Digital Equity of Access package was developed by [Kwantum Analytics](https://www.kwantumedu.com/). The architecture and reference implementation for all modules is built on [Azure Synapse Analytics](https://azure.microsoft.com/en-us/services/synapse-analytics/) - with [Azure Data Lake Storage](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction) as the storage backbone, and [Azure Active Directory](https://azure.microsoft.com/en-us/services/active-directory/) providing the role-based access control.
 
 Assets in the Digital Equity of Access package include:
 
 1. [Data](https://github.com/cstohlmann/oea-hybrid-engagement-package/tree/main/data): For understanding the data relationships and standardized schema mappings used for certain groups of data.
-2. [Documentation](https://github.com/cstohlmann/oea-hybrid-engagement-package/tree/main/docs): [OEA Hybrid Student Engagement Package - Use Case Documentation](). 
+2. [Documentation](https://github.com/cstohlmann/oea-hybrid-engagement-package/tree/main/docs): 
+      * [OEA Hybrid Student Engagement Package - Use Case Documentation](). 
 3. [Notebooks](https://github.com/cstohlmann/oea-hybrid-engagement-package/tree/main/notebook): For cleaning, processing, and curating data within the data lake.
 4. [Pipelines](https://github.com/cstohlmann/oea-hybrid-engagement-package/tree/main/pipeline): For the overarching data processing (i.e., aggregation, subsetting, schema transformation, etc.), and support for PowerBI dashboards.
 5. [PowerBI](https://github.com/cstohlmann/oea-hybrid-engagement-package/tree/main/powerbi): For exploring, visualizing, and deriving insights from the data.
