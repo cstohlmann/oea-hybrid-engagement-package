@@ -33,7 +33,7 @@ Equity of Digital Access  | Quality of Digital Access
 
 ## Package Setup Instructions
 
-To implement your own Hybrid Engagement Package, complete the following: 
+![](https://github.com/cstohlmann/oea-hybrid-engagement-package/blob/main/docs/images/hybrid_engagement_package_setup.png)
 
 <ins><strong>Preparation:</ins></strong> Ensure you have proper [Azure subscription and credentials](https://github.com/microsoft/OpenEduAnalytics/tree/main/framework) and setup the [most recent version of OEA framework](https://github.com/microsoft/OpenEduAnalytics/tree/main/framework#setup-of-framework-assets). This will include the most recent version of the [OEA python class](https://github.com/microsoft/OpenEduAnalytics/blob/main/framework/synapse/notebook/OEA_py.ipynb).
 
