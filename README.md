@@ -52,7 +52,7 @@ Overview of Hybrid Engagement  | School-Level Hybrid Engagement
 ## Data Sources
 
 This package combines multiple data sources which were identified through evaluating the characteristics of hybrid engagement: 
-* <strong>School Information System (SIS)</strong>: School, grade level, class roster, and demographics.
+* <strong>School Information System (SIS)</strong>: School, grade level, and class roster.
 * <strong>Attendance data</strong>: Student in-person attendance data.
 * <strong>Digital Engagement data</strong>: Application use, type of engagement (log-ins, Teams meeting attendance duration, etc.), date of the activity, and user information of the activities.
 
