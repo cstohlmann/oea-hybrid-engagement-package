@@ -2,7 +2,7 @@
 
 ## Use Case Documentation
 
-The [OEA Hybrid Use Case Documentation](https://github.com/microsoft/OpenEduAnalytics/blob/main/docs/use_cases/Open_Education_Analytics_Use_Case_Template_v3.docx) should provide guidance on the end-to-end process of developing a successful Hybrid Engagement use case project. This document includes 
+The [OEA Use Case Documentation](https://github.com/microsoft/OpenEduAnalytics/blob/main/docs/use_cases/Open_Education_Analytics_Use_Case_Template_v3.docx) should provide guidance on the end-to-end process of developing a successful Hybrid Engagement use case project. This document includes 
  - defining of the use case problem,
  - key stakeholder identification and engagement in the project,
  - mapping research theory to data,
