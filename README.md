@@ -81,7 +81,8 @@ Assets in the Hybrid Engagement package include:
 
 1. [Data](https://github.com/cstohlmann/oea-hybrid-engagement-package/tree/main/data): For understanding the data relationships and standardized schema mappings used for certain groups of data.
 2. [Documentation](https://github.com/cstohlmann/oea-hybrid-engagement-package/tree/main/docs): 
-      * [OEA Hybrid Student Engagement Package - Use Case Documentation](https://github.com/microsoft/OpenEduAnalytics/blob/main/docs/use_cases/Open_Education_Analytics_Use_Case_Template_v3.docx). 
+      * [OEA Use Case Documentation Template](https://github.com/microsoft/OpenEduAnalytics/blob/main/docs/use_cases/Open_Education_Analytics_Use_Case_Template_v3.docx). 
+      * More detailed instructions for migrating from test data use, to production data use.
 3. [Notebooks](https://github.com/cstohlmann/oea-hybrid-engagement-package/tree/main/notebook): For cleaning, processing, and curating data within the data lake.
 4. [Pipelines](https://github.com/cstohlmann/oea-hybrid-engagement-package/tree/main/pipeline): For the overarching data processing (i.e., aggregation, subsetting, schema transformation, etc.), and support for PowerBI dashboards.
 5. [PowerBI](https://github.com/cstohlmann/oea-hybrid-engagement-package/tree/main/powerbi): For exploring, visualizing, and deriving insights from the data.
