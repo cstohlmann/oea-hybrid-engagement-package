@@ -9,11 +9,14 @@ This package combines multiple data sources which were identified through answer
 ## SIS Data
 School Information System data is fundamental when considering hybrid engagement. This packages leans on the SIS data connecting students to the classes they are taking, as well as the school(s) in which they attend. 
 
-The following roster tables were aggregated to achieve a single student-fact table, from the [Microsoft Education Insights module test data](https://github.com/microsoft/OpenEduAnalytics/tree/main/modules/module_catalog/Microsoft_Education_Insights/test_data):
- * Person: contains data of the people within the education system,
- * PersonOrganizationRole: contains data of the mapping from person to organization,
- * Organization: contains data of the schools within the education system, and
- * RefDefinition: contains data of the coded for student grade and other useful codes.
+The following roster tables were aggregated to achieve a single student-fact table, from the [Microsoft Education Insights module test data](https://github.com/microsoft/OpenEduAnalytics/tree/main/modules/module_catalog/Microsoft_Education_Insights/test_data). Below indicates which tables are used in this package.
+ * Inights Roster Tables:
+      * AADUser: contains data of people within the education system, 
+      * AADUserPersonMapping: contains data of mapping AADUser table to the Insights Person table,
+      * Person: contains data of the people within the education system,
+      * PersonOrganizationRole: contains data of the mapping from person to organization,
+      * Organization: contains data of the schools within the education system, and
+      * RefDefinition: contains data of the coded for student grade and other useful codes.
 
 ## Attendance Data
 
@@ -31,12 +34,10 @@ In order to better understand hybrid student engagement in an education system, 
 
 ## Power BI Data Model
 
-Below is a view of the data model used in Power BI visualizations. The primary tables and relationships can be seen.
+Below is a view of the data model used in Power BI visualizations. There are three primary tables, where their relationships can be seen.
 
-* **studentPBI Table**: Most of the SIS data is contained within this table - data on student demographics, school they attend, etc.
-* **myqoiPBI Table**: Time dependent records of student access/connectivity data.
-* **studentsection Table**: Contains section SIS data - the class(es) that students are a part of.
-* **destiny Table**: Data used to relay student device assignment by the education system.
-* **school_locations Table**: Data used to create maps of school locations. 
+* **Student_pseudo Table**: Most of the SIS data is contained within this table - data on student IDs, courses they're taking, school they attend, etc.
+* **studentattendance_pseudo Table**: Time dependent records of student in-person attendance.
+* **digital_activity Table**: Contains digital engagement data - app-use, websites visited, etc.
 
-![](https://github.com/cviddenKwantum/oea-digital-learning-insights/blob/main/Digital_Equity_of_Access/docs/images/pbi_datamodel.png)
+![](https://github.com/cstohlmann/oea-hybrid-engagement-package/blob/main/docs/images/hybrid_engagement_pbi_data_model.png)
