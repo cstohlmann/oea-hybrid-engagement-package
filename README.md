@@ -25,9 +25,9 @@ The assets in this package can be combined with course completion, academic asse
 
 See below for examples of developed PowerBI dashboards (see also the [Power BI](https://github.com/cstohlmann/oea-hybrid-engagement-package/tree/main/powerbi) folder).
 
-Overview of Hybrid Engagement  | School-Level Hybrid Engagement
+Explanation Page  | Overview of Hybrid Engagement
 :-------------------------:|:-------------------------:
-![](https://github.com/cviddenKwantum/OpenEduAnalytics/blob/3feaac196010f11d3cc925eb773b731cd3c37dea/packages/ContosoISD_hybrid_engagement/docs/images/PowerBI1.png) |  ![](https://github.com/cviddenKwantum/oea-digital-learning-insights/blob/main/Digital_Equity_of_Access/docs/images/pbi2landscape.png)
+![](https://github.com/cstohlmann/oea-hybrid-engagement-package/blob/main/docs/images/pbi_p0_explanation_page.png) |  ![](https://github.com/cstohlmann/oea-hybrid-engagement-package/blob/main/docs/images/pbi_p1_overview_of_hybrid_engagement.png)
 
 ## Package Setup Instructions
 
@@ -42,7 +42,7 @@ Overview of Hybrid Engagement  | School-Level Hybrid Engagement
     * Run each of the module test data pipelines to ingest the test data into stage 2. 
 2. Use the [Digital Engagement Schema pipeline](https://github.com/microsoft/OpenEduAnalytics/tree/main/schemas/schema_catalog/Digital_Engagement_Schema/pipeline) and process the compatible modules you choose to ingest. This will combine all module-tables into a unified table, and creates a single database for the Power BI dashboard. Visit the [Data](https://github.com/microsoft/OpenEduAnalytics/tree/main/packages/package_catalog/Hybrid_Engagement/data) page for a detailed explanation of its use in the PowerBI data model.
 3. Import and run the [Hybrid Engagement package pipeline template](https://github.com/cstohlmann/oea-hybrid-engagement-package/tree/main/pipeline) to combine SIS data sources into a Power BI star schema model like the example provided in the [Data](https://github.com/cstohlmann/oea-hybrid-engagement-package/tree/main/data) page.
-    * This package pipeline aggregates SIS data from the [Microsoft Education Insights](https://github.com/microsoft/OpenEduAnalytics/tree/main/modules/module_catalog/Microsoft_Education_Insights) and [Contoso SIS](https://github.com/microsoft/OpenEduAnalytics/tree/main/modules/module_catalog/Student_and_School_Data_Systems) modules into a single student table; refer to the [hybrid_enagagement_enrichment](https://github.com/cstohlmann/oea-hybrid-engagement-package/blob/main/notebook/HybridEngagement_enrichment.ipynb) for details on the specific tables being used.
+    * This package pipeline aggregates SIS data from the [Microsoft Education Insights](https://github.com/microsoft/OpenEduAnalytics/tree/main/modules/module_catalog/Microsoft_Education_Insights) and [Contoso SIS](https://github.com/microsoft/OpenEduAnalytics/tree/main/modules/module_catalog/Student_and_School_Data_Systems) modules into a single student table; refer to the [HybridEngagement_enrichment notebook](https://github.com/cstohlmann/oea-hybrid-engagement-package/blob/main/notebook/HybridEngagement_enrichment.ipynb) for details on the specific tables being used.
 4. Use the Power BI dashboard to explore Hybrid Engagement. Note that all pipelines create SQL views which can be accessed via your Synapse workspace serveless SQL endpoint. Example dashboard concepts are [provided in this package](https://github.com/microsoft/OpenEduAnalytics/tree/main/packages/package_catalog/Hybrid_Engagement/powerbi).
 
 ### Migration to production data
