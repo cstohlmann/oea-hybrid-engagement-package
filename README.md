@@ -1,3 +1,5 @@
+<img align="right" height="75" src="https://github.com/microsoft/OpenEduAnalytics/blob/main/docs/pics/oea-logo-nobg.png">
+
 # Hybrid Student Engagement Package
 
 The OEA Hybrid Student Engagement Package provides a set of assets which support an education system in developing their own holistic model to address and gauge hybrid student engagement. There are two main components of this package: 
