@@ -32,6 +32,8 @@ In order to better understand hybrid student engagement in an education system, 
 * **[Clever](https://github.com/microsoft/OpenEduAnalytics/tree/main/modules/module_catalog/Clever/test_data)**: Learning app activity
 * **[i-Ready](https://github.com/microsoft/OpenEduAnalytics/tree/main/modules/module_catalog/iReady/test_data)**: Math and english lesson activity
 
+Note: As you ingest the digital engagement data via the [DigitalActivity_main_pipeline](https://github.com/microsoft/OpenEduAnalytics/tree/main/schemas/schema_catalog/Digital_Engagement_Schema/pipeline), you will need to edit the pipeline to re-create the dashboard with the test data seen in this package; you can do so by only ingesting the data for the Microsoft Education Insights, Clever, and i-Ready modules. Follow the instructions on the [Digital Engagement pipeline page](https://github.com/microsoft/OpenEduAnalytics/tree/main/schemas/schema_catalog/Digital_Engagement_Schema/pipeline#editing-the-modules-and-tables-to-be-standardized) for accomplishing this.
+
 ## Power BI Data Model
 
 Below is a view of the data model used in Power BI visualizations. There are three primary tables, where their relationships can be seen.
