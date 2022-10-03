@@ -31,21 +31,18 @@ Use the tool-tips provided on the visuals to understand the purpose of each data
 3. Connect to the Digital Engagement SQL db: sqls2_digital_activity, and pull in the digital_activity table. This table is the only one that requires a DirectQuery.
 
 #### [Power BI with direct query of data on your data lake](https://github.com/cstohlmann/oea-hybrid-engagement-package/blob/main/powerbi/Hybrid%20Engagement%20Package%20Dashboard%20DirectQuery.pbix):
-- Complete the [module setup instructions](https://github.com/cstohlmann/oea-hybrid-engagement-package#package-setup-instructions).
-- Download the PBIX file with direct query here: [LINK](https://github.com/cstohlmann/oea-hybrid-engagement-package/blob/main/powerbi/Hybrid%20Engagement%20Package%20Dashboard%20DirectQuery.pbix)
-- The dashboard visuals may not load. You will need to switch your Synapse workspace serverless SQL endpoint by:
-    - Select menu item File > Options and settings > Data source settings.
-<kbd> 
-    <img src="https://github.com/microsoft/OpenEduAnalytics/blob/main/modules/module_catalog/Clever/docs/images/pbi%20data%20source.png" width="600"> 
-</kbd>
+1. Complete the [module setup instructions](https://github.com/cstohlmann/oea-hybrid-engagement-package#package-setup-instructions).
+2. Download the PBIX file with direct query here: [LINK](https://github.com/cstohlmann/oea-hybrid-engagement-package/blob/main/powerbi/Hybrid%20Engagement%20Package%20Dashboard%20DirectQuery.pbix)
+3. The dashboard visuals may not load. You will need to switch your Synapse workspace serverless SQL endpoint by:
+   * Select menu item File > Options and settings > Data source settings.
 
-    - Select Change Source...
-| <img src="https://github.com/microsoft/OpenEduAnalytics/blob/main/modules/module_catalog/Clever/docs/images/pbi%20change%20source.png" width="600"> | 
-|-|
-    - Enter your Synapse workspace SQL server endpoint. This can be found on your Synapse workspace information page in the Azure portal.
-<kbd> 
-    <img src="https://github.com/microsoft/OpenEduAnalytics/blob/main/modules/module_catalog/Clever/docs/images/pbi%20sql%20endpt.png" width="600">
-</kbd>
-<kbd> 
-    <img src="https://github.com/microsoft/OpenEduAnalytics/blob/main/modules/module_catalog/Clever/docs/images/synapse%20sql%20enpt.png" width="600"> 
-</kbd>
+![](https://github.com/cstohlmann/oea-hybrid-engagement-package/blob/main/docs/images/pbi_instructions_p1_options_and_settings.png)
+
+   * Select Change Source...
+
+![](https://github.com/cstohlmann/oea-hybrid-engagement-package/blob/main/docs/images/pbi_instructions_p2_data_source_settings.png)
+
+   * Enter your Synapse workspace SQL server endpoint. This can be found on your Synapse workspace information page in the Azure portal.
+
+![](https://github.com/cstohlmann/oea-hybrid-engagement-package/blob/main/docs/images/pbi_instructions_p3_sql_server_db.png)
+![](https://github.com/cstohlmann/oea-hybrid-engagement-package/blob/main/docs/images/pbi_instructions_p4_serverless_sql_endpoint.png)
